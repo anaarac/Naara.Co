@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Naara Co</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="logo">NAARA CO</div>
+
+        <nav class="menu">
+
+            <div class="menu-item">
+
+                <a href="colecao.html">Conjuntos</a>
+
+                <div class="mega-menu">
+
+                    <div>
+                        <h4>Conjuntos</h4>
+                        <a href="#">Treino</a>
+                        <a href="#">Lifestyle</a>
+                        <a href="#">Alta compressão</a>
+                    </div>
+
+                    <div>
+                        <h4>Tops</h4>
+                        <a href="#">Top Sculpt</a>
+                        <a href="#">Top Motion</a>
+                    </div>
+
+                    <div>
+                        <h4>Leggings</h4>
+                        <a href="#">Legging Aura</a>
+                        <a href="#">Legging Flow</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#">Novidades</a>
+            <a href="#">Leggings</a>
+            <a href="#">Tops</a>
+            <a href="#">Sale</a>
+
+        </nav>
+
+        <div class="icons">
+
+            <a href="login.html" class="icon-link">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+
+            <a href="#">
+                <ion-icon name="cart-outline"></ion-icon>
+            </a>
+
+        </div>
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Você veste poder</h1>
+
+            <p>Activewear que transforma presença em atitude.</p>
+
+            <button onclick="location.href='colecao.html'">
+                Comprar coleção
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="best">
+
+        <h2>Mais vendidos</h2>
+
+        <div class="carousel">
+
+            <div class="carousel-track">
+
+                <div class="product">
+
+                    <img src="produto1.jpg">
+
+                    <h3>Conjunto Aura</h3>
+
+                    <p>R$189,90</p>
+
+                    <button onclick="location.href='produto.html'">
+                        Comprar
+                    </button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="produto2.jpg">
+
+                    <h3>Top Sculpt</h3>
+
+                    <p>R$99,90</p>
+
+                    <button>
+                        Comprar
+                    </button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="produto3.jpg">
+
+                    <h3>Short Motion</h3>
+
+                    <p>R$119,90</p>
+
+                    <button>
+                        Comprar
+                    </button>
+
+                </div>
+
+                <div class="product">
+
+                    <img src="produto1.jpg">
+
+                    <h3>Conjunto Aura</h3>
+
+                    <p>R$189,90</p>
+
+                    <button>
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="brand">
+
+        <h2>Performance encontra estilo</h2>
+
+        <p>
+            Tecido tecnológico, modelagem premium e design pensado para movimento.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <div class="socials">
+
+            <a href="https://instagram.com" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="https://tiktok.com" target="_blank">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+
+            <a href="https://wa.me/5500000000000" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+
+            <a href="mailto:contato@naaraco.com">
+                <ion-icon name="mail-outline"></ion-icon>
+            </a>
+
+        </div>
+
+        <p>
+            © 2025 Naara Co — Todos os direitos reservados
+        </p>
+
+    </footer>
+
+    <script>
+
+        let stock = 12
+
+        setInterval(() => {
+
+            if (stock > 5) {
+
+                stock--
+
+                document.getElementById("stockNumber").innerText = stock
+
+            }
+
+        }, 10000)
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

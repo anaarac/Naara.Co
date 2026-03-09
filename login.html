@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Conta | Naara Co</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="shipping-banner">
+        🚚 Frete grátis para todo Brasil em compras acima de R$199
+    </div>
+
+    <header id="header">
+
+        <div class="logo">NAARA CO</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Conjuntos</a>
+            <a href="#">Leggings</a>
+            <a href="#">Tops</a>
+        </nav>
+
+        <div class="icons">
+
+            <a href="login.html">
+                <ion-icon name="person-outline"></ion-icon>
+            </a>
+
+            <ion-icon name="cart-outline"></ion-icon>
+
+        </div>
+
+    </header>
+
+
+    <section class="account-container">
+
+        <div class="account-box">
+
+            <h1>Minha conta</h1>
+
+            <p class="account-subtitle">
+                Entre ou crie sua conta para acompanhar pedidos e finalizar compras mais rápido.
+            </p>
+
+            <div class="account-tabs">
+
+                <button class="tab active" onclick="mostrarLogin()">Entrar</button>
+
+                <button class="tab" onclick="mostrarCadastro()">Criar conta</button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <form id="loginForm" class="account-form">
+
+                <input type="email" placeholder="Email">
+
+                <input type="password" placeholder="Senha">
+
+                <button class="primary-btn">
+                    Entrar
+                </button>
+
+                <p class="forgot">
+                    Esqueceu sua senha?
+                </p>
+
+            </form>
+
+
+            <!-- CADASTRO -->
+
+            <form id="cadastroForm" class="account-form hidden">
+
+                <input type="text" placeholder="Nome completo">
+
+                <input type="email" placeholder="Email">
+
+                <input type="tel" placeholder="Telefone">
+
+                <input type="password" placeholder="Criar senha">
+
+                <button class="primary-btn">
+                    Criar conta
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+
+                <span>ou</span>
+
+            </div>
+
+
+            <button class="google-btn">
+
+                <ion-icon name="logo-google"></ion-icon>
+
+                Continuar com Google
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="socials">
+
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="#">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+
+            <a href="#">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+
+            <a href="#">
+                <ion-icon name="mail-outline"></ion-icon>
+            </a>
+
+        </div>
+
+        <p>
+            © 2025 Naara Co — Todos os direitos reservados
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function mostrarLogin() {
+
+            document.getElementById("loginForm").classList.remove("hidden")
+            document.getElementById("cadastroForm").classList.add("hidden")
+
+            document.querySelectorAll(".tab")[0].classList.add("active")
+            document.querySelectorAll(".tab")[1].classList.remove("active")
+
+        }
+
+        function mostrarCadastro() {
+
+            document.getElementById("cadastroForm").classList.remove("hidden")
+            document.getElementById("loginForm").classList.add("hidden")
+
+            document.querySelectorAll(".tab")[1].classList.add("active")
+            document.querySelectorAll(".tab")[0].classList.remove("active")
+
+        }
+
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Conjunto Aura</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="logo">NAARA CO</div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="#">Conjuntos</a>
+            <a href="#">Leggings</a>
+            <a href="#">Tops</a>
+
+        </nav>
+
+        <div class="icons">🛒</div>
+
+    </header>
+
+
+    <section class="product-page">
+
+        <div class="gallery">
+
+            <div class="image-container">
+
+                <img id="mainImage" src="produto1.jpg">
+
+            </div>
+
+            <div class="thumbs">
+
+                <img src="produto1.jpg" onclick="trocarProduto('produto1.jpg','Preto')">
+
+                <img src="produto2.jpg" onclick="trocarProduto('produto2.jpg','Verde')">
+
+                <img src="produto3.jpg" onclick="trocarProduto('produto3.jpg','Cinza')">
+
+            </div>
+
+        </div>
+
+
+        <div class="info">
+
+            <h1>Conjunto Aura</h1>
+
+            <div class="reviews">
+
+                <span class="stars">★★★★★</span>
+
+                <span class="review-count">
+                    214 avaliações verificadas
+                </span>
+
+            </div>
+
+            <div class="price">
+                R$189,90
+            </div>
+
+            <div class="stock">
+                🔥 Restam apenas <span id="stockNumber">12</span> unidades
+            </div>
+
+
+            <label>Cor</label>
+
+            <div class="colors">
+
+                <span class="color black" onclick="trocarProduto('produto1.jpg','Preto')"></span>
+
+                <span class="color green" onclick="trocarProduto('produto2.jpg','Verde')"></span>
+
+                <span class="color grey" onclick="trocarProduto('produto3.jpg','Cinza')"></span>
+
+            </div>
+
+            <p class="selected-color">
+                Cor selecionada: <span id="colorName">Preto</span>
+            </p>
+
+
+            <label>Tamanho</label>
+
+            <div class="sizes">
+
+                <button>P</button>
+                <button>M</button>
+                <button>G</button>
+
+            </div>
+
+
+            <button class="buy">
+                Adicionar ao carrinho
+            </button>
+
+
+            <div class="benefits">
+
+                <p>✔ Compressão estratégica</p>
+
+                <p>✔ Tecido respirável</p>
+
+                <p>✔ Modelagem que valoriza o corpo</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="description">
+
+        <h2>Descrição</h2>
+
+        <p>
+
+            Desenvolvido para performance e estilo, o Conjunto Aura combina
+            elasticidade, conforto e design premium.
+
+        </p>
+
+    </section>
+
+
+
+    <script>
+
+        function trocarProduto(img, cor) {
+
+            document.getElementById("mainImage").src = img
+
+            document.getElementById("colorName").innerText = cor
+
+        }
+
+
+        /* contador de estoque */
+
+        let stock = 12
+
+        setInterval(() => {
+
+            if (stock > 5) {
+
+                stock--
+
+                document.getElementById("stockNumber").innerText = stock
+
+            }
+
+        }, 10000)
+
+    </script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
