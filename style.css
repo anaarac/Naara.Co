@@ -532,4 +532,67 @@ RESPONSIVE
         padding: 60px 20px;
     }
 
+    /* =========================
+DARK MODE AUTOMÁTICO
+========================= */
+
+    @media (prefers-color-scheme: dark) {
+
+        body {
+            background: #0f0f0f;
+            color: #f5f5f5;
+        }
+
+        header {
+            background: #111;
+            border-bottom: 1px solid #222;
+        }
+
+        .menu a {
+            color: #f5f5f5;
+        }
+
+        .logo {
+            color: white;
+        }
+
+        .account-box {
+            background: #1a1a1a;
+        }
+
+        .account-form input {
+            background: #111;
+            color: white;
+            border: 1px solid #333;
+        }
+
+        .primary-btn {
+            background: white;
+            color: black;
+        }
+
+        footer {
+            border-top: 1px solid #222;
+        }
+
+        .socials a {
+            color: white;
+        }
+
+        .collection-hero {
+            background: #161616;
+        }
+
+        .description {
+            background: #161616;
+        }
+
+        .product-card h3 {
+            color: white;
+        }
+
+        .price {
+            color: white;
+        }
+    }
 }
