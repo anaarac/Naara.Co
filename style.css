@@ -27,7 +27,6 @@ header {
 }
 
 header.scrolled {
-    background: white;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -97,46 +96,58 @@ header.scrolled {
 }
 
 /* =========================
-HERO
+HERO VIDEO
 ========================= */
 
 .hero {
+    position: relative;
     height: 90vh;
-    background: url("hero.jpg") center/cover;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    justify-content: center;
     color: white;
-    position: relative;
+    text-align: center;
 }
 
-.hero::before {
-    content: "";
+.hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    z-index: -1;
 }
 
-.hero-text {
-    position: relative;
-    max-width: 500px;
-    animation: fadeUp 1s ease;
+.hero-content {
+    z-index: 2;
+    max-width: 700px;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 70px;
-    margin-bottom: 10px;
+    font-size: 64px;
+    margin-bottom: 20px;
 }
 
-.hero button {
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: black;
+    color: white;
     padding: 15px 40px;
-    background: white;
-    color: black;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #333;
 }
 
 /* =========================
@@ -161,7 +172,9 @@ CAROUSEL
 
 .product img {
     width: 100%;
-    border-radius: 6px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .product button {
@@ -181,6 +194,61 @@ BRAND SECTION
     padding: 80px;
     text-align: center;
     background: #f5f5f5;
+}
+
+/* =========================
+COLLECTION PAGE
+========================= */
+
+.collection-hero {
+    padding: 100px 8%;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.collection-hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.collection-hero p {
+    color: #666;
+}
+
+.collection-products {
+    padding: 60px 8%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.price {
+    font-weight: 600;
 }
 
 /* =========================
@@ -281,7 +349,7 @@ PRODUCT PAGE
 }
 
 /* =========================
-REVIEWS / ESTOQUE
+REVIEWS
 ========================= */
 
 .stars {
@@ -386,36 +454,8 @@ LOGIN / ACCOUNT
     cursor: pointer;
 }
 
-.divider {
-    margin: 20px 0;
-    position: relative;
-}
-
-.divider span {
-    background: white;
-    padding: 0 10px;
-    color: #777;
-}
-
-.divider::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 1px;
-    background: #ddd;
-    z-index: -1;
-}
-
 .hidden {
     display: none;
-}
-
-.forgot {
-    font-size: 13px;
-    color: #777;
-    cursor: pointer;
 }
 
 /* =========================
@@ -450,18 +490,6 @@ footer {
 ANIMATIONS
 ========================= */
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes scrollCarousel {
     0% {
         transform: translateX(0)
@@ -486,10 +514,6 @@ RESPONSIVE
         display: none;
     }
 
-    .hero {
-        padding: 40px;
-    }
-
     .hero h1 {
         font-size: 40px;
     }
@@ -498,4 +522,14 @@ RESPONSIVE
         grid-template-columns: 1fr;
         padding: 40px;
     }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .collection-hero {
+        padding: 60px 20px;
+    }
+
 }
