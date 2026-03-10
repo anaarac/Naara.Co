@@ -1,60 +1,77 @@
-/* MENU TRANSPARENTE NO SCROLL */
+/* =========================
+MENU TRANSPARENTE NO SCROLL
+========================= */
 
 window.addEventListener("scroll", function () {
 
-    const header = document.getElementById("header")
+const header = document.getElementById("header");
 
-    if (!header) return
+if (!header) return;
 
-    if (window.scrollY > 50) {
+if (window.scrollY > 50) {
+header.classList.add("scrolled");
+} else {
+header.classList.remove("scrolled");
+}
 
-        header.classList.add("scrolled")
-
-    } else {
-
-        header.classList.remove("scrolled")
-
-    }
-
-})
+});
 
 
+/* =========================
+MENU MOBILE (HAMBURGER)
+========================= */
 
-/* TROCAR IMAGEM DO PRODUTO */
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
 
-function trocarProduto(img, cor) {
+if(menuToggle && menu){
 
-    const mainImage = document.getElementById("mainImage")
-    const colorName = document.getElementById("colorName")
+menuToggle.addEventListener("click", () => {
 
-    if (mainImage) {
-        mainImage.src = img
-    }
+menu.classList.toggle("active");
 
-    if (colorName) {
-        colorName.innerText = cor
-    }
+});
 
 }
 
 
+/* =========================
+TROCAR IMAGEM DO PRODUTO
+========================= */
 
-/* CONTADOR DE ESTOQUE */
+function trocarProduto(img, cor){
 
-let stock = 12
+const mainImage = document.getElementById("mainImage");
+const colorName = document.getElementById("colorName");
+
+if(mainImage){
+mainImage.src = img;
+}
+
+if(colorName){
+colorName.innerText = cor;
+}
+
+}
+
+
+/* =========================
+CONTADOR DE ESTOQUE
+========================= */
+
+let stock = 12;
 
 setInterval(() => {
 
-    const stockNumber = document.getElementById("stockNumber")
+const stockNumber = document.getElementById("stockNumber");
 
-    if (!stockNumber) return
+if(!stockNumber) return;
 
-    if (stock > 5) {
+if(stock > 5){
 
-        stock--
+stock--;
+stockNumber.innerText = stock;
 
-        stockNumber.innerText = stock
+}
 
-    }
-
-}, 10000)
+}, 10000);
