@@ -119,4 +119,14 @@ DARK MODE AUTOMÁTICO
         color: white;
     }
 
+    /* MENU MOBILE DARK MODE */
+
+    .menu a {
+        color: white;
+        font-weight: 500;
+    }
+
+    .menu a:hover {
+        opacity: 0.7;
+    }
 }
