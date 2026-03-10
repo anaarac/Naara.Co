@@ -5,6 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Naara Co</title>
 
     <link rel="stylesheet" href="style.css">
@@ -17,11 +19,11 @@
 
         <div class="logo">NAARA CO</div>
 
+        <div class="menu-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
         <nav class="menu">
-            
-            <div class="menu-toggle">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
 
             <div class="menu-item">
 
@@ -73,10 +75,8 @@
             </a>
 
         </div>
-        </div>
 
     </header>
-
 
     <section class="hero">
 
@@ -91,7 +91,6 @@
         </div>
 
     </section>
-
 
     <section class="best">
 
@@ -145,8 +144,9 @@
 
             </div>
 
-    </section>
+        </div>
 
+    </section>
 
     <section class="brand">
 
@@ -157,7 +157,6 @@
         </p>
 
     </section>
-
 
     <footer>
 
@@ -187,23 +186,7 @@
 
     </footer>
 
-    <script>
-
-        let stock = 12
-
-        setInterval(() => {
-
-            if (stock > 5) {
-
-                stock--
-
-                document.getElementById("stockNumber").innerText = stock
-
-            }
-
-        }, 10000)
-
-    </script>
+    <script src="script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
