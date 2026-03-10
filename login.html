@@ -1,180 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
-    <meta name="color-scheme" content="light dark">
-    <title>Conta | Naara Co</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Naara Co</title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<body class="login-page">
 
-<body>
-
-    <header id="header">
-
-        <div class="logo">NAARA CO</div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#">Novidades</a>
-            <a href="#">Legging</a>
-            <a href="#">Tops</a>
-            <a href="#">Short</a>
-            <a href="#">Bermuda</a>
-            <a href="#">Macaquinho</a>
-            <a href="#">Macacão</a>
-        </nav>
-
-        <div class="icons">
-
-            <a href="login.html">
-                <ion-icon name="person-outline"></ion-icon>
-            </a>
-
-            <ion-icon name="cart-outline"></ion-icon>
-
+    <div class="login-container">
+        <div class="login-visual">
+            <img src="./imagens/Aura - lilas frente .WEBP" alt="Naara Lifestyle">
+            <div class="visual-overlay">
+                <h2 class="italic-font">Sua melhor versão começa aqui.</h2>
+            </div>
         </div>
 
-    </header>
-
-
-    <section class="account-container">
-
-        <div class="account-box">
-
-            <h1>Minha conta</h1>
-
-            <p class="account-subtitle">
-                Entre ou crie sua conta para acompanhar pedidos e finalizar compras mais rápido.
-            </p>
-
-            <div class="account-tabs">
-
-                <button class="tab active" onclick="mostrarLogin()">Entrar</button>
-
-                <button class="tab" onclick="mostrarCadastro()">Criar conta</button>
-
+        <div class="login-content">
+            <a href="index.html" class="back-home">
+                <ion-icon name="arrow-back-outline"></ion-icon> Voltar
+            </a>
+            
+            <div class="login-header">
+                <img src="./imagens/Logo2.png" alt="Logo" class="login-logo">
+                <h3>Bem-vinda de volta</h3>
+                <p>Acesse sua conta para conferir seus pedidos.</p>
             </div>
 
+            <form class="login-form">
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Senha</label>
+                    <input type="password" placeholder="••••••••" required>
+                    <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+                </div>
 
-            <!-- LOGIN -->
-
-            <form id="loginForm" class="account-form">
-
-                <input type="email" placeholder="Email">
-
-                <input type="password" placeholder="Senha">
-
-                <button class="primary-btn">
-                    Entrar
+                <button type="submit" class="btn-login">Entrar</button>
+                
+                <div class="divider"><span>ou</span></div>
+                
+                <button type="button" class="btn-google">
+                    <ion-icon name="logo-google"></ion-icon> Continuar com Google
                 </button>
-
-                <p class="forgot">
-                    Esqueceu sua senha?
-                </p>
-
             </form>
 
-
-            <!-- CADASTRO -->
-
-            <form id="cadastroForm" class="account-form hidden">
-
-                <input type="text" placeholder="Nome completo">
-
-                <input type="email" placeholder="Email">
-
-                <input type="tel" placeholder="Telefone">
-
-                <input type="password" placeholder="Criar senha">
-
-                <button class="primary-btn">
-                    Criar conta
-                </button>
-
-            </form>
-
-
-            <div class="divider">
-
-                <span>ou</span>
-
-            </div>
-
-
-            <button class="google-btn">
-
-                <ion-icon name="logo-google"></ion-icon>
-
-                Continuar com Google
-
-            </button>
-
+            <p class="signup-link">Não tem uma conta? <a href="#">Criar agora</a></p>
         </div>
-
-    </section>
-
-
-    <footer>
-
-        <div class="socials">
-
-            <a href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-
-            <a href="#">
-                <ion-icon name="logo-tiktok"></ion-icon>
-            </a>
-
-            <a href="#">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-
-            <a href="#">
-                <ion-icon name="mail-outline"></ion-icon>
-            </a>
-
-        </div>
-
-        <p>
-            © 2025 Naara Co — Todos os direitos reservados
-        </p>
-
-    </footer>
-
-
-    <script>
-
-        function mostrarLogin() {
-
-            document.getElementById("loginForm").classList.remove("hidden")
-            document.getElementById("cadastroForm").classList.add("hidden")
-
-            document.querySelectorAll(".tab")[0].classList.add("active")
-            document.querySelectorAll(".tab")[1].classList.remove("active")
-
-        }
-
-        function mostrarCadastro() {
-
-            document.getElementById("cadastroForm").classList.remove("hidden")
-            document.getElementById("loginForm").classList.add("hidden")
-
-            document.querySelectorAll(".tab")[1].classList.add("active")
-            document.querySelectorAll(".tab")[0].classList.remove("active")
-
-        }
-
-    </script>
-
+    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>

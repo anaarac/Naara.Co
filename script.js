@@ -4,15 +4,15 @@ MENU TRANSPARENTE NO SCROLL
 
 window.addEventListener("scroll", function () {
 
-const header = document.getElementById("header");
+    const header = document.getElementById("header");
 
-if (!header) return;
+    if (!header) return;
 
-if (window.scrollY > 50) {
-header.classList.add("scrolled");
-} else {
-header.classList.remove("scrolled");
-}
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
 
 });
 
@@ -24,13 +24,13 @@ MENU MOBILE (HAMBURGER)
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 
-if(menuToggle && menu){
+if (menuToggle && menu) {
 
-menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
 
-menu.classList.toggle("active");
+        menu.classList.toggle("active");
 
-});
+    });
 
 }
 
@@ -39,18 +39,18 @@ menu.classList.toggle("active");
 TROCAR IMAGEM DO PRODUTO
 ========================= */
 
-function trocarProduto(img, cor){
+function trocarProduto(img, cor) {
 
-const mainImage = document.getElementById("mainImage");
-const colorName = document.getElementById("colorName");
+    const mainImage = document.getElementById("mainImage");
+    const colorName = document.getElementById("colorName");
 
-if(mainImage){
-mainImage.src = img;
-}
+    if (mainImage) {
+        mainImage.src = img;
+    }
 
-if(colorName){
-colorName.innerText = cor;
-}
+    if (colorName) {
+        colorName.innerText = cor;
+    }
 
 }
 
@@ -63,15 +63,24 @@ let stock = 12;
 
 setInterval(() => {
 
-const stockNumber = document.getElementById("stockNumber");
+    const stockNumber = document.getElementById("stockNumber");
 
-if(!stockNumber) return;
+    if (!stockNumber) return;
 
-if(stock > 5){
+    if (stock > 5) {
 
-stock--;
-stockNumber.innerText = stock;
+        stock--;
+        stockNumber.innerText = stock;
 
-}
+    }
 
 }, 10000);
+
+window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
