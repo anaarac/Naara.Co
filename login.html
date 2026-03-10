@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Naara Co</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 </head>
-<body class="login-page">
 
-    <div class="login-container">
-        <div class="login-visual">
-            <img src="./imagens/Aura - lilas frente .WEBP" alt="Naara Lifestyle">
+<body class="login-page-body">
+
+    <header id="header">
+        <div class="logo-wrapper">
+            <img src="./imagens/Logo2.png" alt="Logo Naara Co" class="nav-logo">
+            <span class="brand-name">NAARA <span class="gold-text">CO</span></span>
+        </div>
+        <nav class="menu">
+            <a href="index.html">Novidades</a>
+            <a href="./legging.html">Legging</a>
+            <a href="./tops.html">Blusas & Tops</a>
+            <a href="./macacoes.html">Macacões</a>
+            <a href="./short.html">Shorts & Bermudas</a>
+            <a href="./conjuntos.html">Conjuntos</a>
+        </nav>
+        <div class="icons">
+            <a href="index.html" title="Voltar"><ion-icon name="arrow-back-outline"></ion-icon></a>
+            <a href="carrinho.html"><ion-icon name="cart-outline"></ion-icon></a>
+        </div>
+    </header>
+
+    <main class="login-split-container">
+
+        <div class="login-side-visual">
+            <video autoplay muted loop playsinline class="login-video">
+                <source src="./videos/Aura.MP4" type="video/mp4">
+            </video>
             <div class="visual-overlay">
-                <h2 class="italic-font">Sua melhor versão começa aqui.</h2>
             </div>
         </div>
 
-        <div class="login-content">
-            <a href="index.html" class="back-home">
-                <ion-icon name="arrow-back-outline"></ion-icon> Voltar
-            </a>
-            
-            <div class="login-header">
-                <img src="./imagens/Logo2.png" alt="Logo" class="login-logo">
-                <h3>Bem-vinda de volta</h3>
-                <p>Acesse sua conta para conferir seus pedidos.</p>
+        <div class="login-side-form">
+            <div class="login-glass-card">
+                <div class="login-header">
+                    <h3>Bem-vinda</h3>
+                    <p>Acesse sua conta exclusiva Naara Co.</p>
+                </div>
+
+                <form class="login-form-fields">
+                    <div class="input-box">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Senha</label>
+                        <input type="password" placeholder="••••••••" required>
+                        <a href="#" class="forgot-link">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login-main">Entrar</button>
+
+                    <div class="login-divider"><span>ou entre com</span></div>
+
+                    <div class="social-login-grid">
+                        <button type="button" class="btn-social"><ion-icon name="logo-google"></ion-icon></button>
+                        <button type="button" class="btn-social"><ion-icon name="logo-apple"></ion-icon></button>
+                    </div>
+                </form>
+
+                <div class="login-footer">
+                    <p>Não tem conta? <a href="#" class="gold-text">Criar cadastro</a></p>
+                </div>
             </div>
-
-            <form class="login-form">
-                <div class="input-group">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="seu@email.com" required>
-                </div>
-                
-                <div class="input-group">
-                    <label>Senha</label>
-                    <input type="password" placeholder="••••••••" required>
-                    <a href="#" class="forgot-pass">Esqueceu a senha?</a>
-                </div>
-
-                <button type="submit" class="btn-login">Entrar</button>
-                
-                <div class="divider"><span>ou</span></div>
-                
-                <button type="button" class="btn-google">
-                    <ion-icon name="logo-google"></ion-icon> Continuar com Google
-                </button>
-            </form>
-
-            <p class="signup-link">Não tem uma conta? <a href="#">Criar agora</a></p>
         </div>
-    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+</main>
+
+    <div class="login-mini-footer">
+        <p>© 2026 Naara Co. — <a href="#">Privacidade</a> | <a href="#">Termos</a></p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
