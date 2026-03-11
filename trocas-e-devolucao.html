@@ -4,128 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trocas e Devoluções | NaaraCo</title>
+    <title>Trocas e Devoluções | Naara Co</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos específicos para a legibilidade do texto legal no fundo preto */
-        .legal-text-wrapper {
-            max-width: 800px;
-            margin-bottom: 100px;
-        }
-
-        .legal-block {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1a1a1a;
-            padding-bottom: 25px;
-        }
-
-        .legal-block h3 {
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #d4af37;
-            /* Dourado do seu padrão */
-            margin-bottom: 15px;
-        }
-
-        .legal-block p,
-        .legal-block li {
-            color: #888;
-            font-size: 0.9rem;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-
-        .legal-block strong {
-            color: #fff;
-        }
-
-        .legal-block ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .legal-block ul li::before {
-            content: "— ";
-            color: #d4af37;
-        }
-    </style>
+    <link rel="stylesheet" href="termos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="naara-catalog-page">
 
-    <div class="catalog-fixed-wrapper">
-        <main class="catalog-main">
+    <header class="catalog-header">
+        <div class="logo">
+            <span style="color:#fff; font-weight:700; letter-spacing:3px;">NAARA</span>
+            <span style="color:#d4af37; font-weight:700; letter-spacing:3px;"> CO</span>
+        </div>
 
-            <div class="catalog-top-info">
-                <a href="index.html" class="back-link">← Voltar para a loja</a>
-                <h1 class="catalog-title">Trocas e Devoluções</h1>
-                <p class="catalog-subtitle">POLÍTICA DE SATISFAÇÃO NAARACO</p>
-            </div>
+        <nav class="nav-links-legal">
+            <a href="index.html">NOVIDADES</a>
+            <a href="#">LEGGING</a>
+            <a href="#">BLUSAS & TOPS</a>
+            <a href="#">MACACÕES</a>
+            <a href="#">SHORTS & BERMUDAS</a>
+            <a href="#">CONJUNTOS</a>
+        </nav>
 
-            <div class="legal-text-wrapper">
+        <div class="header-icons">
+            <a href="index.html" style="color:#fff; text-decoration:none; font-size:0.8rem; margin-right:15px;">←</a>
+            <span style="cursor:pointer; margin-right:15px;">👤</span>
+            <span style="cursor:pointer;">🛒</span>
+        </div>
+    </header>
 
-                <div class="legal-block">
-                    <p>Na <strong>NaaraCo</strong>, prezamos pela excelência e satisfação. Caso sua peça não esteja de
-                        acordo com o esperado, seguimos rigorosamente o Código de Defesa do Consumidor.</p>
+    <div class="legal-box-container">
+        <div class="legal-glass-box">
+            <h1>Trocas e Devoluções</h1>
+            <p>Diretrizes de satisfação e logística reversa conforme o Código de Defesa do Consumidor.</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 30px;">
+                <div>
+                    <h3>1. Arrependimento</h3>
+                    <p>De acordo com o Art. 49 do CDC, o cliente possui até <strong>7 (sete) dias corridos</strong> após
+                        o recebimento para solicitar o estorno integral da compra sem necessidade de justificativa.</p>
+
+                    <h3>2. Condições da Peça</h3>
+                    <p>Para validação, a peça deve estar na embalagem original, sem sinais de uso ou lavagem, e com
+                        todos os lacres e etiquetas originais intactos.</p>
                 </div>
-
-                <div class="legal-block">
-                    <h3>1. Direito de Arrependimento</h3>
-                    <p>Conforme o <strong>Art. 49 do CDC</strong>, o cliente tem até <strong>7 (sete) dias
-                            corridos</strong> após o recebimento para desistir da compra online e solicitar o reembolso
-                        total.</p>
-                </div>
-
-                <div class="legal-block">
-                    <h3>2. Condições para Devolução</h3>
-                    <p>Para que o processo seja aceito, a peça deve cumprir os seguintes requisitos:</p>
-                    <ul>
-                        <li>Estar na embalagem original;</li>
-                        <li>Não apresentar indícios de uso ou lavagem;</li>
-                        <li>Manter todas as etiquetas e lacres originais fixados.</li>
-                    </ul>
-                </div>
-
-                <div class="legal-block">
+                <div>
                     <h3>3. Defeito de Fabrico</h3>
-                    <p>Caso a peça apresente alguma irregularidade de fabricação, o prazo para comunicação é de até
-                        <strong>30 dias</strong> após a receção.</p>
-                </div>
+                    <p>Irregularidades devem ser comunicadas em até <strong>30 dias</strong>. A análise técnica será
+                        realizada em nosso centro de distribuição para validação da troca ou reparo.</p>
 
-                <div class="legal-block">
-                    <h3>4. Como Solicitar</h3>
-                    <p>Inicie seu atendimento enviando o número do pedido e fotos da peça para:</p>
-                    <p><strong>E-mail:</strong> adm@naaraco.com.br</p>
-                    <p><strong>WhatsApp:</strong> [Seu Número Aqui]</p>
+                    <h3>4. Restituição</h3>
+                    <p>O estorno será efetuado pelo mesmo método de pagamento (<strong>InfinitePay</strong>) após a
+                        conferência física da mercadoria retornada ao nosso endereço no Ipiranga/SP.</p>
                 </div>
-
-                <div class="legal-block">
-                    <h3>5. Reembolso</h3>
-                    <p>O estorno será processado via <strong>InfinitePay</strong> (mesmo método da compra) após a
-                        análise técnica em nosso centro de distribuição.</p>
-                </div>
-
-                <div class="legal-block" style="border-bottom: none;">
-                    <h3>Informações Legais</h3>
-                    <p>NaaraCo | CNPJ: 00.000.000/0001-00<br>
-                        Endereço: Rua [Nome], Ipiranga, São Paulo/SP</p>
-                </div>
-
             </div>
 
-        </main>
+            <p
+                style="margin-top: 40px; font-size: 0.65rem; color: #444; border-top: 1px solid #1a1a1a; padding-top: 20px;">
+                CONTATO: ADM@NAARACO.COM.BR | WHATSAPP: [65.170.310/0001-08]
+            </p>
+        </div>
     </div>
 
-    <footer class="cart-mini-footer">
-        <div class="footer-content">
-            <p>© 2026 NAARACO</p>
-            <div class="footer-links">
-                <a href="termos.html">Termos</a>
-                <a href="devolucao.html">Devolução</a>
-                <a href="privacidade.html">Privacidade</a>
-            </div>
+    <footer class="footer-legal-custom">
+        <p>© 2026 NAARA CO — TODOS OS DIREITOS RESERVADOS</p>
+        <div class="footer-links-bottom">
+            <a href="privacidade.html">PRIVACIDADE</a>
+            <a href="termos.html">TERMOS DE USO</a>
+            <a href="trocas-e-devolucao.html">TROCAS E DEVOLUÇÕES</a>
         </div>
     </footer>
 
