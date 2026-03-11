@@ -27,12 +27,12 @@
             <a href="./conjuntos.html">Conjuntos</a>
         </nav>
         <div class="icons">
-            <a href="login.html"><ion-icon name="person-outline"></ion-icon></a>
-            <a href="carrinho.html"><ion-icon name="cart-outline"></ion-icon></a>
+            <a href="login.html" title="Minha Conta"><ion-icon name="person-outline"></ion-icon></a>
+            <a href="carrinho.html" title="Carrinho"><ion-icon name="cart-outline"></ion-icon></a>
         </div>
     </header>
 
-<section class="hero">
+    <section class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="./videos/Aura.MP4" type="video/mp4">
         </video>
@@ -47,7 +47,20 @@
     </section>
 
     <section class="best">
-        <h2 class="section-title">Mais Vendidos</h2>
+        <div class="section-header">
+            <h2 class="section-title">Mais Vendidos</h2>
+            <div class="carousel-nav">
+                <button class="nav-btn prev"
+                    onclick="document.querySelector('.carousel-track').scrollBy({left: -350, behavior: 'smooth'})">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <button class="nav-btn next"
+                    onclick="document.querySelector('.carousel-track').scrollBy({left: 350, behavior: 'smooth'})">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
         <div class="carousel-track">
             <div class="product">
                 <div class="product-img-container">
@@ -58,9 +71,10 @@
                     <div class="stars">⭐⭐⭐⭐⭐ <span>(127)</span></div>
                     <h3>Top Aura Sculpt</h3>
                     <p class="price">R$ 75,90</p>
-                    <button class="btn-buy">Comprar</button>
+                    <button class="btn-login-main">Comprar</button>
                 </div>
             </div>
+
             <div class="product">
                 <div class="product-img-container">
                     <span class="badge">Bestseller</span>
@@ -70,12 +84,36 @@
                     <div class="stars">⭐⭐⭐⭐⭐ <span>(84)</span></div>
                     <h3>Conjunto Aura Flow</h3>
                     <p class="price">R$ 190,00</p>
-                    <button class="btn-buy">Comprar</button>
+                    <button class="btn-login-main">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-container">
+                    <img src="./imagens/Aura - lilas frente .WEBP" alt="Short Naara">
+                </div>
+                <div class="product-info">
+                    <div class="stars">⭐⭐⭐⭐⭐ <span>(42)</span></div>
+                    <h3>Short Performance</h3>
+                    <p class="price">R$ 89,90</p>
+                    <button class="btn-login-main">Comprar</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-container">
+                    <img src="./imagens/Aura - Cappuccino frente inteiro.JPG" alt="Macacão Naara">
+                </div>
+                <div class="product-info">
+                    <div class="stars">⭐⭐⭐⭐⭐ <span>(61)</span></div>
+                    <h3>Macacão Sculpt</h3>
+                    <p class="price">R$ 210,00</p>
+                    <button class="btn-login-main">Comprar</button>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <section class="features">
         <div class="feature-card">
             <ion-icon name="shield-checkmark-outline"></ion-icon>
@@ -102,12 +140,14 @@
     </section>
 
     <section class="newsletter">
-        <h3>Faça parte do clube Naara Co.</h3>
-        <p>Receba 10% de desconto na primeira compra.</p>
-        <form class="news-form">
-            <input type="email" placeholder="Seu melhor e-mail">
-            <button type="submit">Inscrever</button>
-        </form>
+        <div class="newsletter-content">
+            <h3>Faça parte do clube Naara Co.</h3>
+            <p>Receba 10% de desconto na primeira compra.</p>
+            <form class="news-form">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="btn-login-main">Inscrever</button>
+            </form>
+        </div>
     </section>
 
     <footer>
@@ -119,13 +159,16 @@
                 </div>
                 <p class="footer-description">Presença que se veste.</p>
             </div>
+
             <div class="footer-box">
                 <h4>Explore</h4>
                 <ul>
                     <li><a href="#">Coleções</a></li>
                     <li><a href="#">Guia de Tamanhos</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
                 </ul>
             </div>
+
             <div class="footer-box">
                 <h4>Social</h4>
                 <div class="socials">
@@ -133,7 +176,7 @@
                             name="logo-instagram"></ion-icon></a>
                     <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
                     <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                    <a href="adm@naaraco.com.br"><ion-icon name="mail-outline"></ion-icon></a>
+                    <a href="mailto:adm@naaraco.com.br"><ion-icon name="mail-outline"></ion-icon></a>
                 </div>
             </div>
         </div>

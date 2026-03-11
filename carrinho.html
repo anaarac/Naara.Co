@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Carrinho | Naara Co</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrinho.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600;700&display=swap"
         rel="stylesheet">
@@ -27,7 +29,7 @@
             <a href="./conjuntos.html">Conjuntos</a>
         </nav>
         <div class="icons">
-            <a href="index.html" title="Continuar Comprando"><ion-icon name="arrow-back-outline"></ion-icon></a>
+            <a href="index.html" title="Voltar"><ion-icon name="arrow-back-outline"></ion-icon></a>
             <a href="login.html"><ion-icon name="person-outline"></ion-icon></a>
         </div>
     </header>
@@ -38,7 +40,9 @@
         <div class="cart-grid">
             <div class="cart-items">
                 <div class="cart-item">
-                    <img src="./imagens/Aura - lilas frente .WEBP" alt="Produto">
+                    <div class="cart-img-wrapper">
+                        <img src="./imagens/Aura - lilas frente .WEBP" alt="Top Aura">
+                    </div>
                     <div class="item-details">
                         <div class="item-header">
                             <h3>Top Aura Sculpt</h3>
@@ -47,9 +51,9 @@
                         <p class="item-variant">Cor: Lilás | Tamanho: M</p>
                         <div class="item-controls">
                             <div class="qty-selector">
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
+                                <button type="button" class="minus">-</button>
+                                <span class="qty-value">1</span>
+                                <button type="button" class="plus">+</button>
                             </div>
                             <span class="item-price">R$ 75,90</span>
                         </div>
@@ -57,7 +61,9 @@
                 </div>
 
                 <div class="cart-item">
-                    <img src="./imagens/Aura - Cappuccino frente inteiro.JPG" alt="Produto">
+                    <div class="cart-img-wrapper">
+                        <img src="./imagens/Aura - Cappuccino frente inteiro.JPG" alt="Conjunto Aura">
+                    </div>
                     <div class="item-details">
                         <div class="item-header">
                             <h3>Conjunto Aura Flow</h3>
@@ -66,9 +72,9 @@
                         <p class="item-variant">Cor: Cappuccino | Tamanho: P</p>
                         <div class="item-controls">
                             <div class="qty-selector">
-                                <button>-</button>
-                                <span>1</span>
-                                <button>+</button>
+                                <button type="button" class="minus">-</button>
+                                <span class="qty-value">1</span>
+                                <button type="button" class="plus">+</button>
                             </div>
                             <span class="item-price">R$ 190,00</span>
                         </div>
@@ -79,25 +85,14 @@
             <aside class="cart-summary">
                 <div class="summary-card">
                     <h3>Resumo do Pedido</h3>
-
                     <div class="summary-extra">
                         <label>Calcular Frete</label>
                         <div class="input-group">
-                            <input type="text" placeholder="00000-000" id="cep-input">
+                            <input type="text" placeholder="00000-000">
                             <button class="btn-small">Calcular</button>
                         </div>
                     </div>
-
-                    <div class="summary-extra">
-                        <label>Cupom de Desconto</label>
-                        <div class="input-group">
-                            <input type="text" placeholder="CÓDIGO" id="coupon-input">
-                            <button class="btn-small">Aplicar</button>
-                        </div>
-                    </div>
-
                     <div class="summary-divider"></div>
-
                     <div class="summary-row">
                         <span>Subtotal</span>
                         <span>R$ 265,90</span>
@@ -106,45 +101,63 @@
                         <span>Frete</span>
                         <span class="gold-text">A calcular</span>
                     </div>
-
                     <div class="summary-divider"></div>
-
                     <div class="summary-row total">
-                        <span>Total</span>
+                        <span>Total </span>
                         <div class="total-price">
-                            <span>R$ 265,90</span>
+                            <span> R$ 265,90</span>
                             <small>ou 6x de R$ 44,31 s/ juros</small>
                         </div>
                     </div>
-
                     <button class="btn-checkout">Finalizar Compra</button>
 
-                    <div class="payment-icons">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa"
-                            class="card-brand">
-
+                    <div class="payment-methods">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-                            alt="Mastercard" class="card-brand">
-
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_Pix.png" alt="Pix"
-                            class="card-brand pix-logo">
-
+                            alt="Mastercard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_Pix.png" alt="Pix">
                         <div class="boleto-icon">
                             <ion-icon name="barcode-outline"></ion-icon>
+                            <span>Boleto</span>
                         </div>
                     </div>
-                    <div class="safe-checkout">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <span>Ambiente 100% Seguro</span>
-                    </div>
                 </div>
-        </div>
-        </aside>
+            </aside>
         </div>
     </main>
 
+    <footer class="cart-mini-footer">
+        <div class="footer-content">
+            <p>© 2026 Naara Co. — Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Trocas e Devoluções</a>
+            </div>
+        </div>
+    </footer>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Lógica dos botões de quantidade
+        document.querySelectorAll('.qty-selector').forEach(selector => {
+            const btnMinus = selector.querySelector('.minus');
+            const btnPlus = selector.querySelector('.plus');
+            const qtyValue = selector.querySelector('.qty-value');
+
+            btnMinus.addEventListener('click', () => {
+                let current = parseInt(qtyValue.innerText);
+                if (current > 1) qtyValue.innerText = current - 1;
+            });
+
+            btnPlus.addEventListener('click', () => {
+                let current = parseInt(qtyValue.innerText);
+                qtyValue.innerText = current + 1;
+            });
+        });
+    </script>
 </body>
 
 </html>

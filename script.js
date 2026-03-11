@@ -84,3 +84,17 @@ window.addEventListener("scroll", function () {
         header.classList.remove("scrolled");
     }
 });
+
+// Simulação de Frete
+const btnFrete = document.querySelector('.summary-extra .btn-small');
+const inputCep = document.querySelector('.summary-extra input');
+const freteDisplay = document.querySelector('.gold-text');
+
+btnFrete.addEventListener('click', () => {
+    if (inputCep.value.length >= 8) {
+        freteDisplay.innerText = "R$ 15,00"; // Valor simulado
+        alert("Frete calculado com sucesso para o CEP " + inputCep.value);
+    } else {
+        alert("Por favor, digite um CEP válido.");
+    }
+});

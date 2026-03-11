@@ -1,0 +1,38 @@
+/* Espaçamento padrão para páginas que não são a Home */
+.main-content {
+    min-height: 80vh;
+    padding-top: 100px;
+}
+
+/* Estilo padrão para botões de ação nessas páginas */
+.btn-action {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--text-main);
+    color: var(--bg-body);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn-action:hover {
+    background: var(--gold-lux);
+    color: #000;
+}
+
+/* Links de retorno */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.back-link:hover {
+    color: var(--gold-lux);
+}
