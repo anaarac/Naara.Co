@@ -1,38 +1,232 @@
-/* Espaçamento padrão para páginas que não são a Home */
-.main-content {
-    min-height: 80vh;
-    padding-top: 100px;
+/* --- FUNDO E RESET --- */
+.naara-catalog-page {
+    background-color: #000 !important;
+    color: #fff !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Estilo padrão para botões de ação nessas páginas */
-.btn-action {
+/* --- ESTRUTURA CENTRALIZADA --- */
+.catalog-fixed-wrapper {
+    flex: 1;
     width: 100%;
-    padding: 1.2rem;
-    background: var(--text-main);
-    color: var(--bg-body);
-    border: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.4s;
+    padding-top: 140px;
+    /* Espaço para o menu fixo */
+    display: flex;
+    justify-content: center;
 }
 
-.btn-action:hover {
-    background: var(--gold-lux);
-    color: #000;
+.catalog-main {
+    width: 90%;
+    max-width: 1200px;
 }
 
-/* Links de retorno */
+/* --- TOPO DA PÁGINA --- */
+.catalog-top-info {
+    margin-bottom: 50px;
+}
+
 .back-link {
-    display: inline-block;
-    margin-bottom: 20px;
     text-decoration: none;
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    color: #888;
+    font-size: 0.7rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .back-link:hover {
-    color: var(--gold-lux);
+    color: #d4af37;
+}
+
+.catalog-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    margin: 15px 0 5px 0;
+    font-weight: 600;
+}
+
+.catalog-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- GRID DE PRODUTOS E SIDEBAR --- */
+.catalog-grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+/* Sidebar de Filtros */
+.catalog-sidebar {
+    position: sticky;
+    top: 140px;
+}
+
+.filter-section {
+    margin-bottom: 40px;
+}
+
+.filter-section h3 {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-option:hover {
+    color: #fff;
+}
+
+/* Grade de Peças */
+.catalog-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 25px;
+    padding-bottom: 100px;
+}
+
+/* CARDS */
+.naara-card {
+    width: 100%;
+}
+
+.naara-img-box {
+    position: relative;
+    aspect-ratio: 3/4;
+    background: #111;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.naara-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.naara-card:hover img {
+    transform: scale(1.05);
+}
+
+/* BOTÃO ADICIONAR (Reutilizando seu padrão btn-action) */
+.naara-card .btn-action {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    opacity: 0;
+}
+
+.naara-card:hover .btn-action {
+    bottom: 0;
+    opacity: 1;
+}
+
+.btn-action:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* Info do Produto */
+.naara-info h3 {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.naara-price {
+    font-weight: 700;
+    color: #d4af37;
+    font-size: 1rem;
+}
+
+/* --- FOOTER IDENTICO AO CARRINHO --- */
+.cart-mini-footer {
+    background: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+    padding: 40px 5%;
+    width: 100%;
+    margin-top: auto;
+    /* Garante que fique no final */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p,
+.footer-links a {
+    font-size: 0.7rem;
+    color: #555;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+    .catalog-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-sidebar {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

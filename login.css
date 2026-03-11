@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    /* Proíbe o scroll */
+    /* Proíbe o scroll para manter o visual premium */
     display: flex;
     flex-direction: column;
     background-color: #000;
@@ -12,12 +12,11 @@
 .login-split-container {
     display: flex;
     flex: 1;
-    /* Ocupa todo o espaço entre o header e o mini-footer */
+    /* Ocupa todo o espaço entre o header e o footer */
     min-height: 0;
-    /* Importante para flexbox não transbordar */
 }
 
-/* --- LADO DO VÍDEO COM BLUR --- */
+/* --- LADO DO VÍDEO --- */
 .login-side-visual {
     flex: 1.2;
     position: relative;
@@ -30,7 +29,6 @@
     object-fit: cover;
 }
 
-/* Blur/Fade lateral para transição suave */
 .login-side-visual::after {
     content: '';
     position: absolute;
@@ -51,7 +49,6 @@
 .login-glass-card {
     width: 100%;
     max-width: 380px;
-    /* Reduzi levemente para caber melhor */
     padding: 2rem;
     background: rgba(15, 15, 15, 0.6);
     backdrop-filter: blur(15px);
@@ -60,7 +57,6 @@
     flex-direction: column;
 }
 
-/* Ajustes de Espaçamento Interno */
 .login-header h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
@@ -69,12 +65,12 @@
 }
 
 .login-header p {
-    color: var(--text-muted);
+    color: #888;
     font-size: 0.85rem;
     margin-bottom: 1.5rem;
 }
 
-/* Inputs Compactos */
+/* Inputs */
 .input-box {
     margin-bottom: 1rem;
     text-align: left;
@@ -86,6 +82,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 .input-box input {
@@ -102,16 +99,16 @@
     display: block;
     text-align: right;
     font-size: 0.7rem;
-    color: var(--gold-lux);
+    color: #d4af37;
     text-decoration: none;
     margin-top: 5px;
 }
 
-/* Botão Entrar */
+/* Botões */
 .btn-login-main {
     width: 100%;
     padding: 0.9rem;
-    background: var(--gold-lux);
+    background: #d4af37;
     color: #000;
     border: none;
     font-weight: 700;
@@ -121,7 +118,14 @@
     transition: 0.3s;
 }
 
-/* Botões Sociais Empilhados */
+.login-divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.7rem;
+    color: #555;
+    text-transform: uppercase;
+}
+
 .social-login-column {
     display: flex;
     flex-direction: column;
@@ -144,31 +148,29 @@
 }
 
 .btn-social:hover {
-    border-color: var(--gold-lux);
+    border-color: #d4af37;
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* --- MINI FOOTER FIXO NA BASE --- */
-.login-mini-footer {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-    border-top: 1px solid #111;
-    font-size: 0.65rem;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
 }
 
-/* --- RESPONSIVIDADE ADAPTATIVA --- */
+.login-footer a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 900px) {
     .login-page-body {
         overflow-y: auto;
+        height: auto;
     }
 
-    /* Permite scroll apenas no mobile */
     .login-split-container {
         flex-direction: column;
     }
@@ -180,11 +182,5 @@
 
     .login-side-form {
         padding: 40px 20px;
-    }
-
-    .login-glass-card {
-        background: transparent;
-        border: none;
-        backdrop-filter: none;
     }
 }
