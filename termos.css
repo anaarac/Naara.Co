@@ -1,0 +1,45 @@
+/* Estilos para Páginas Legais */
+.legal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    text-align: left;
+    /* Garante que o texto longo seja lido da esquerda para a direita */
+}
+
+.legal-content h1 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.last-update {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.text-block {
+    margin-bottom: 25px;
+}
+
+.text-block h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+.text-block ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
